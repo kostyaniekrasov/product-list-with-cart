@@ -8,17 +8,20 @@ interface Props {
 
 const ProductList = ({ products, isLoading }: Props) => {
   return (
-    <div>
-      <h3 className="font-bold text-rose-900 text-4xl mb-4">Desserts</h3>
+    <div className="w-full">
+      <h3 className="mb-4 text-4xl font-bold text-rose-900">Desserts</h3>
       {isLoading ? (
-        <div className="flex-col gap-4 w-full flex items-center justify-center">
+        <div className="flex flex-col items-center justify-center gap-4">
           <div
-            className="w-15 h-15 border-5 text-blue-400 text-4xl animate-spin border-gray-300 flex
-              items-center justify-center border-t-blue-400 rounded-full"
+            className="flex h-15 w-15 animate-spin items-center justify-center rounded-full border-5
+              border-gray-300 border-t-blue-400 text-4xl text-blue-400"
           />
         </div>
       ) : (
-        <div className="flex flex-col items-center sm:grid sm:grid-cols-2 gap-x-5 gap-y-7">
+        <div
+          className="flex w-full flex-col items-center gap-x-5 gap-y-7 sm:grid sm:grid-cols-2
+            sm:gap-x-2 lg:grid-cols-3"
+        >
           {products.map((product) => (
             <ProductItem
               key={product.name}

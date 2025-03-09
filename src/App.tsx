@@ -22,27 +22,17 @@ function App() {
 
   return (
     <CartProvider>
-      <div className="font-['Red Hat Text'] flex flex-col gap-8 bg-rose-50 p-5 font-normal">
-        <ProductList
-          products={products}
-          isLoading={isLoading}
-        />
+      <div className="font-['Red Hat Text'] bg-rose-50 font-normal">
+        <div
+          className="mx-auto flex flex-col items-center gap-8 p-5 sm:max-w-2xl lg:max-w-3xl
+            xl:max-w-7xl xl:flex-row xl:items-start xl:py-16"
+        >
+          <ProductList
+            products={products}
+            isLoading={isLoading}
+          />
 
-        <Cart />
-        <div className="flex">
-          <div className="bg-red h-10 w-10">red</div>
-          <div className="bg-green h-10 w-10">green</div>
-          <div className="h-10 w-10 bg-rose-50">50</div>
-          <div className="h-10 w-10 bg-rose-100">100</div>
-          <div className="h-10 w-10 bg-rose-300">300</div>
-          <div className="h-10 w-10 bg-rose-400">400</div>
-          <div className="h-10 w-10 bg-rose-500">500</div>
-          <div className="h-10 w-10 bg-rose-900">900</div>
-        </div>
-        <div className="flex">
-          <p className="text-2xl font-normal">400</p>
-          <p className="text-2xl font-semibold">600</p>
-          <p className="text-2xl font-bold">700</p>
+          <Cart />
         </div>
       </div>
     </CartProvider>

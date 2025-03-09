@@ -8,13 +8,13 @@ const Cart = () => {
   const { cart, getCartTotal, confirmOrder, isOrderConfirmed } = useCart();
 
   return (
-    <AnimatePresence mode="wait">
-      {isOrderConfirmed && <OrderConfirmedScreen />}
+    <div className="w-full lg:max-w-86">
+      <AnimatePresence mode="wait">
+        {isOrderConfirmed && <OrderConfirmedScreen />}
 
-      {!isOrderConfirmed && (
         <motion.div
           key="cartContainer"
-          className="flex flex-col items-center rounded-xl bg-white p-5"
+          className="flex h-min flex-col items-center rounded-xl bg-white p-5"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -36,6 +36,7 @@ const Cart = () => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
+                  className="w-full"
                 >
                   <IconIllustrationEmptyCart />
                   <p className="mb-5 text-sm text-rose-400">
@@ -72,7 +73,8 @@ const Cart = () => {
 
                     <button
                       type="button"
-                      className="bg-red rounded-3xl p-3 text-base text-rose-50"
+                      className="bg-red cursor-pointer rounded-3xl p-3 text-base text-rose-50 duration-300
+                        hover:bg-red-900"
                       onClick={() => confirmOrder()}
                     >
                       Confirm Order
@@ -83,8 +85,8 @@ const Cart = () => {
             </AnimatePresence>
           </motion.div>
         </motion.div>
-      )}
-    </AnimatePresence>
+      </AnimatePresence>
+    </div>
   );
 };
 
