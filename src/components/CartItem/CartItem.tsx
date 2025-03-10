@@ -21,10 +21,12 @@ const CartItem = ({ item, isOrderConfirmed }: Props) => {
         {isOrderConfirmed && (
           <div
             style={
-              { '--image-url': `url(${image.mobile})` } as React.CSSProperties
+              {
+                '--thumbnail-url': `url(${image.thumbnail})`,
+              } as React.CSSProperties
             }
-            className="flex h-14 w-14 rounded-lg bg-[image:var(--image-url)] bg-cover object-cover"
-            data-url={image.mobile}
+            className="flex h-14 w-14 rounded-lg bg-[image:var(--thumbnail-url)] bg-cover object-cover"
+            data-url={image.thumbnail}
           />
         )}
         <div className="flex flex-col gap-1">
