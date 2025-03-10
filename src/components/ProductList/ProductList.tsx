@@ -20,7 +20,7 @@ const ProductList = ({ products, isLoading }: Props) => {
       ) : (
         <div
           className="flex w-full flex-col items-center gap-x-5 gap-y-7 sm:grid sm:grid-cols-2
-            sm:gap-x-2 lg:grid-cols-3"
+            sm:gap-x-4 lg:grid-cols-3"
         >
           {products.map((product) => (
             <ProductItem
