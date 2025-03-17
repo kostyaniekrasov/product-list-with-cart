@@ -48,7 +48,6 @@ Users should be able to:
 - Mobile-first workflow
 - [TypeScript](https://www.typescriptlang.org/)
 - [React](https://reactjs.org/)
-- [react-hook-form](https://react-hook-form.com/)
 - [Tailwindcss](https://tailwindcss.com/)
 - [Vite](https://vite.dev/)
 - [classnames](https://vite.dev/)
